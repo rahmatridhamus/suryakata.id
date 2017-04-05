@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+    <com.vipul.hp_hp.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:marker_size="25dp"
+        app:line_size="2dp"
+        app:line="@color/grey"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardTimeline"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tx_division"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_toStartOf="@+id/tx_dateRemaining"
+                android:text="Divisi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tx_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tx_division"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="Judul" />
+
+            <TextView
+                android:id="@+id/tx_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tx_division"
+                android:layout_alignParentTop="false"
+                android:layout_alignStart="@+id/tx_division"
+                android:layout_below="@+id/tx_desc"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:text="date"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tx_dateRemaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Remaining"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="8sp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">suryakata.id</string>
+    <string name="key">8A1vGlrK9ejSBW4oxB94f32R81n6GGU8</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="urlApi">http://infodeck.archisdiningrat.net/api/</string>
+    <string name="urlYoutube">https://www.youtube.com/channel/UCsFS-jCZPa_sA8wJ8flaIDw</string>
+
+
+
+
+    <string name="deskripsiUmum">Organisasi ini bernama Himpunan Mahasiswa S1 Teknik Informatika Universitas Telkom, untuk selanjutnya disingkat HIMA IF Universitas Telkom. HIMA IF Universitas Telkom didirikan pada tanggal 10 Desember 2014 (yang sebelumnya bernama HMIF IT Telkom didirikan pada tanggal 14 Juli 1993) di Bandung sampai dengan waktu yang tidak ditentukan. HIMA IF Universitas Telkom berkedudukan di Program Studi S1 Teknik Informatika, Fakultas Informatika, kampus Universitas Telkom Bandung. HIMA IF Universitas Telkom bertujuan untuk mewujudkan mahasiswa Program Studi S1 Teknik Informatika yang beriman dan bertakwa, mandiri dan jujur dalam bersikap, berwawasan global yang memiliki kompetensi strategis bagi terbentuknya mahasiswa yang berintelektual tinggi serta bertanggungjawab, mampu bekerja sama dan mengembangkan diri baik secara keilmuan maupun sosial.</string>
+    <string name="artiLogo">Arti logo :\n
+a.	Tiga buah garis horizontal berwarna kuning pada bagian bawah dalam lingkaran melambangkan Tri Dharma Perguruan Tinggi yang melandasi perikehidupan HIMA IF. Warna kuning adalah warna resmi yang diberikan untuk Fakultas Informatika yang menaungi prodi S1 Teknik Informatika.
+\n\nb.	Tulisan HIMAIF menyatu dengan segitiga berwarna biru dongker melambangkan kepercayaan diri dan keseimbangan, serta jiwa kreatifitas yang melekat kepada karakter Mahasiswa S1 Teknik Informatika.
+\n\nc.	Sepuluh garis abu-abu di kiri dan dua belas garis abu-abu di kanan melambangkan tanggal berdirinya HIMA IF 10 Desember.
+\n\nd.	Lingkaran berwarna biru dongker melambangkan penyebaran informasi secara global sekaligus warna identitas HIMA IF.
+\n\ne.	Tulisan Himpunan Mahasiswa Strata 1 Teknik Informatika (HIMA IF) berwarna hitam merupakan nama himpunan, dan tulisan Univeristas Telkom berwarna hitam menunjukkan keberadaan HIMA IF yang merupakan bagian dari civitas akademika dari Universitas Telkom.
+</string>
+    <string name="jargon">“HIMA IF, reach the top.
+        \nWhat will you be? Be the best.
+        \nWhat will you be? Be the best of the best.
+        \nPut in the black box!
+        \nIF inf THEN format DO tika WRITE informatika the best yeah!”</string>
+
+    <string name="adart">Dasar hukum organisasi HIMAIF yang berlaku saat ini dapat dilihat di https://goo.gl/2Qph8J</string>
+
+
+</resources>

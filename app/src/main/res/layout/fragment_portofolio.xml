@@ -1,0 +1,428 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.idev.rahmatridham.imm.InfoPersyarikatanActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="fill_vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/MyAppbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Persyarikatan Muhammadiyah"
+                        android:textColor="#757575"
+                        android:textSize="16dp"
+                        android:id="@+id/textViewContactUs"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewAisyiah"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignTop="@+id/imageViewMuhammadiyah"
+                        android:layout_toRightOf="@+id/imageViewMuhammadiyah"
+                        android:layout_toEndOf="@+id/imageViewMuhammadiyah"
+                        android:layout_marginStart="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewDikdasmen"
+                        android:layout_alignTop="@+id/imageViewAisyiah"
+                        android:layout_toRightOf="@+id/imageViewAisyiah"
+                        android:layout_toEndOf="@+id/imageViewAisyiah"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewFacebook"
+                        android:layout_alignTop="@+id/imageViewDikdasmen"
+                        android:layout_toRightOf="@+id/imageViewDikdasmen"
+                        android:layout_toEndOf="@+id/imageViewDikdasmen"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewTwitter"
+                        android:layout_alignTop="@+id/imageViewFacebook"
+                        android:layout_toRightOf="@+id/imageViewFacebook"
+                        android:layout_toEndOf="@+id/imageViewFacebook"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewMuhammadiyah"
+                        android:layout_alignTop="@+id/textViewContactUs"
+                        android:layout_alignLeft="@+id/textViewContactUs"
+                        android:layout_alignStart="@+id/textViewContactUs"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="15dp" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="190dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Organisasi Otonom Muhammadiyah"
+                        android:textColor="#757575"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/TextViewOurCommunities"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewIPM"
+                        android:layout_below="@+id/TextViewOurCommunities"
+                        android:layout_alignLeft="@+id/TextViewOurCommunities"
+                        android:layout_alignStart="@+id/TextViewOurCommunities"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewIMM"
+                        android:layout_alignTop="@+id/imageViewIPM"
+                        android:layout_toRightOf="@+id/imageViewIPM"
+                        android:layout_toEndOf="@+id/imageViewIPM"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewPemuda"
+                        android:layout_alignTop="@+id/imageViewIMM"
+                        android:layout_toRightOf="@+id/imageViewIMM"
+                        android:layout_toEndOf="@+id/imageViewIMM"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_alignTop="@+id/imageViewPemuda"
+                        android:layout_toRightOf="@+id/imageViewPemuda"
+                        android:layout_toEndOf="@+id/imageViewPemuda"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewTapakSuci"
+                        android:layout_above="@+id/textView6"
+                        android:layout_toRightOf="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_toEndOf="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PD IPM"
+                        android:id="@+id/textView6"
+                        android:layout_below="@+id/imageViewIPM"
+                        android:layout_alignLeft="@+id/imageViewIPM"
+                        android:layout_alignStart="@+id/imageViewIPM"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignRight="@+id/imageViewIPM"
+                        android:layout_alignEnd="@+id/imageViewIPM"
+                        android:gravity="center_horizontal"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PC IMM"
+                        android:id="@+id/textView7"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textView6"
+                        android:layout_alignLeft="@+id/imageViewIMM"
+                        android:layout_alignStart="@+id/imageViewIMM"
+                        android:layout_alignRight="@+id/imageViewIMM"
+                        android:layout_alignEnd="@+id/imageViewIMM"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PD PM"
+                        android:id="@+id/textView8"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textView7"
+                        android:layout_alignLeft="@+id/imageViewPemuda"
+                        android:layout_alignStart="@+id/imageViewPemuda"
+                        android:layout_alignRight="@+id/imageViewPemuda"
+                        android:layout_alignEnd="@+id/imageViewPemuda"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PD NA"
+                        android:id="@+id/textView9"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textView8"
+                        android:layout_alignLeft="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_alignStart="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_alignRight="@+id/imageViewNasyiatulAisyiah"
+                        android:layout_alignEnd="@+id/imageViewNasyiatulAisyiah"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Tapak Suci"
+                        android:id="@+id/textView10"
+                        android:gravity="center_horizontal"
+                        android:layout_below="@+id/imageViewTapakSuci"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignLeft="@+id/imageViewTapakSuci"
+                        android:layout_alignStart="@+id/imageViewTapakSuci"
+                        android:textSize="10dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewHizbulWathan"
+                        android:layout_below="@+id/textView6"
+                        android:layout_alignLeft="@+id/textView6"
+                        android:layout_alignStart="@+id/textView6"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="PD HW"
+                        android:id="@+id/textView11"
+                        android:gravity="center_horizontal"
+                        android:textSize="10dp"
+                        android:layout_below="@+id/imageViewHizbulWathan"
+                        android:layout_alignLeft="@+id/imageViewHizbulWathan"
+                        android:layout_alignStart="@+id/imageViewHizbulWathan"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignRight="@+id/imageViewHizbulWathan"
+                        android:layout_alignEnd="@+id/imageViewHizbulWathan" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Our Events"
+                        android:textColor="#757575"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/TextViewOurEvents"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewFortran"
+                        android:layout_below="@+id/TextViewOurEvents"
+                        android:layout_alignLeft="@+id/TextViewOurEvents"
+                        android:layout_alignStart="@+id/TextViewOurEvents"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewPanda"
+                        android:layout_alignTop="@+id/imageViewFortran"
+                        android:layout_toRightOf="@+id/imageViewFortran"
+                        android:layout_toEndOf="@+id/imageViewFortran"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewDNIF"
+                        android:layout_alignTop="@+id/imageViewPanda"
+                        android:layout_toRightOf="@+id/imageViewPanda"
+                        android:layout_toEndOf="@+id/imageViewPanda"
+                        android:layout_marginLeft="20dp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/imageViewExplosIF"
+                        android:layout_alignTop="@+id/imageViewDNIF"
+                        android:layout_toRightOf="@+id/imageViewDNIF"
+                        android:layout_toEndOf="@+id/imageViewDNIF"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Fortran"
+                        android:id="@+id/textViewFortran"
+                        android:layout_below="@+id/imageViewFortran"
+                        android:layout_alignLeft="@+id/imageViewFortran"
+                        android:layout_alignStart="@+id/imageViewFortran"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignRight="@+id/imageViewFortran"
+                        android:layout_alignEnd="@+id/imageViewFortran"
+                        android:gravity="center_horizontal"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Panda IF"
+                        android:id="@+id/textViewPanda"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textViewFortran"
+                        android:layout_alignLeft="@+id/imageViewPanda"
+                        android:layout_alignStart="@+id/imageViewPanda"
+                        android:layout_alignRight="@+id/imageViewPanda"
+                        android:layout_alignEnd="@+id/imageViewPanda"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="DNIF"
+                        android:id="@+id/textViewDNIF"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textViewPanda"
+                        android:layout_alignLeft="@+id/imageViewDNIF"
+                        android:layout_alignStart="@+id/imageViewDNIF"
+                        android:layout_alignRight="@+id/imageViewDNIF"
+                        android:layout_alignEnd="@+id/imageViewDNIF"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="ExplosIF"
+                        android:id="@+id/textViewExplosIF"
+                        android:gravity="center_horizontal"
+                        android:layout_alignTop="@+id/textViewDNIF"
+                        android:layout_alignLeft="@+id/imageViewExplosIF"
+                        android:layout_alignStart="@+id/imageViewExplosIF"
+                        android:layout_alignRight="@+id/imageViewExplosIF"
+                        android:layout_alignEnd="@+id/imageViewExplosIF"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Muhammadiyah Information Page"
+        android:id="@+id/textViewjudul"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="15dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textColor="#676262" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="500dp"
+            android:visibility="invisible"
+            app:backgroundTint="@android:color/holo_red_light"
+            app:elevation="0dp"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@android:drawable/stat_notify_chat" />
+    </RelativeLayout>
+</RelativeLayout>
