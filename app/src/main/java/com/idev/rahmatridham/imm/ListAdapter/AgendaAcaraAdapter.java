@@ -14,8 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.idev.rahmatridham.imm.Orientation;
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.R;
 import com.idev.rahmatridham.imm.model.TimelineModel;
 import com.vipul.hp_hp.timelineview.TimelineView;
 
@@ -58,7 +57,7 @@ public class AgendaAcaraAdapter extends RecyclerView.Adapter<TimeLineViewHolder>
 //        String strNow = timeLineModel.getDate().substring(0, 10);
 //        Calendar c = Calendar.getInstance();
         if (timeLineModel.getStatus().equals("Today")) {
-            holder.mTimelineView.setMarker(mContext.getResources().getDrawable(R.drawable.marker_white));
+            holder.mTimelineView.setMarker(mContext.getResources().getDrawable(R.drawable.marker));
         }
 
         holder.views.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +78,7 @@ public class AgendaAcaraAdapter extends RecyclerView.Adapter<TimeLineViewHolder>
                         .setPositiveButton("Hubungi", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent intent = new Intent(Intent.ACTION_CALL);
-                                intent.setData(Uri.parse("tel:" + "082240219493"));
+                                intent.setData(Uri.parse("tel:" + timeLineModel.getContact()));
 //                                Toast.makeText(mContext, "asfsf", Toast.LENGTH_SHORT).show();
                                 if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                                     // TODO: Consider calling

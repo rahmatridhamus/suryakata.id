@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">suryakata.id</string>
     <string name="key">8A1vGlrK9ejSBW4oxB94f32R81n6GGU8</string>
-
+    <string name="facebook_app_id">723064901194063</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="urlApi">http://infodeck.archisdiningrat.net/api/</string>

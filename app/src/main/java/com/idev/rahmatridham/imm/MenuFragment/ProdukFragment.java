@@ -1,11 +1,16 @@
 package com.idev.rahmatridham.imm.MenuFragment;
 
 
+import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -23,8 +28,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.idev.rahmatridham.imm.ListAdapter.ProdukAdapter;
-import com.idev.rahmatridham.himaifofficialapps.R;
-import com.idev.rahmatridham.imm.model.JualanModel;
+import com.idev.rahmatridham.imm.ProdukDetailActivity;
+import com.idev.rahmatridham.imm.R;
+import com.idev.rahmatridham.imm.model.ProdukModel;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -40,7 +46,7 @@ import java.util.Map;
 public class ProdukFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
     ListView listView;
     ProdukAdapter adapter;
-    ArrayList<JualanModel> newsArrayList;
+    ArrayList<ProdukModel> newsArrayList;
     private SwipeRefreshLayout swipeRefreshLayout;
 
     public ProdukFragment() {
@@ -104,11 +110,11 @@ public class ProdukFragment extends Fragment implements SwipeRefreshLayout.OnRef
                             JSONObject result = new JSONObject(response);
                             JSONObject resSet = result.getJSONObject("result");
                             JSONArray jsonArray = resSet.getJSONArray("data");
-                            JualanModel model;
+                            ProdukModel model;
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                model = new JualanModel(object.optString("id"), object.optString("img"), object.optString("name"), object.optString("desc"), object.optString("price"));
+                                model = new ProdukModel(object.optString("id"), object.optString("img"), object.optString("name"), object.optString("desc"), object.optString("price"),"082240219493");
                                 newsArrayList.add(model);
                             }
 
@@ -154,14 +160,45 @@ public class ProdukFragment extends Fragment implements SwipeRefreshLayout.OnRef
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        JualanModel newsModel = newsArrayList.get(position);
+        ProdukModel newsModel = newsArrayList.get(position);
+        Intent intent = new Intent(ProdukFragment.this.getContext(), ProdukDetailActivity.class);
+        intent.putExtra("urlfoto", newsModel.getImg());
+        intent.putExtra("name", newsModel.getName());
+        intent.putExtra("desc", newsModel.getDesc());
+        intent.putExtra("price", newsModel.getPrice());
+        intent.putExtra("contact", newsModel.getContact());
 
-        Toast.makeText(ProdukFragment.this.getContext(), newsModel.getDesc(), Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+//        Toast.makeText(view.getContext(), newsModel.getDesc(), Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
-    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+    public boolean onItemLongClick(AdapterView<?> parent, final View view, int position, long id) {
+        final ProdukModel model = newsArrayList.get(position);
+
+        new AlertDialog.Builder(view.getContext())
+                .setTitle("Hubungi PIC")
+                .setMessage("Barang " + model.getName() + ", oleh " + "Amal Usaha Muhammadiyah" + "\n\n Kontak PIC: " + "082240219493")
+                .setPositiveButton("Hubungi", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_CALL);
+                        intent.setData(Uri.parse("tel:" + "082240219493"));
+//                                Toast.makeText(mContext, "asfsf", Toast.LENGTH_SHORT).show();
+                        if (ActivityCompat.checkSelfPermission(view.getContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                            // TODO: Consider calling
+                            //    ActivityCompat#requestPermissions
+                            // here to request the missing permissions, and then overriding
+                            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                            //                                          int[] grantResults)
+                            // to handle the case where the user grants the permission. See the documentation
+                            // for ActivityCompat#requestPermissions for more details.
+                            return;
+                        }
+                        view.getContext().startActivity(intent);
+                    }
+                })
+                .show();
         return false;
     }
 

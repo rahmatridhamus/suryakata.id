@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.R;
 import com.idev.rahmatridham.imm.model.NewsModel;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;

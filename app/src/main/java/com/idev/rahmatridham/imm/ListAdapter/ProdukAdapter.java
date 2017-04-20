@@ -1,18 +1,11 @@
 package com.idev.rahmatridham.imm.ListAdapter;
 
-import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -22,8 +15,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
-import com.idev.rahmatridham.imm.model.JualanModel;
+import com.idev.rahmatridham.imm.R;
+import com.idev.rahmatridham.imm.model.ProdukModel;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -36,9 +29,9 @@ import java.util.Locale;
  */
 public class ProdukAdapter extends BaseAdapter {
     Context context;
-    List<JualanModel> jualanModelList;
+    List<ProdukModel> jualanModelList;
 
-    public ProdukAdapter(Context context, List<JualanModel> jualanModelList) {
+    public ProdukAdapter(Context context, List<ProdukModel> jualanModelList) {
         this.context = context;
         this.jualanModelList = jualanModelList;
     }
@@ -63,7 +56,7 @@ public class ProdukAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.fjb_listrow, parent, false);
 
-        final JualanModel model = jualanModelList.get(position);
+        final ProdukModel model = jualanModelList.get(position);
 
         CardView cardView = (CardView) v.findViewById(R.id.card_view);
         TextView title = (TextView) v.findViewById(R.id.textViewNamaItem);
@@ -95,34 +88,34 @@ public class ProdukAdapter extends BaseAdapter {
             }
         });
 
-        cardView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                new AlertDialog.Builder(v.getContext())
-                        .setTitle("Hubungi PIC")
-                        .setMessage("Barang " + model.getName() + ", oleh " + "Amal Usaha Muhammadiyah" + "\n\n Kontak PIC: " + "082240219493")
-                        .setPositiveButton("Hubungi", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(Intent.ACTION_CALL);
-                                intent.setData(Uri.parse("tel:" + "082240219493"));
-//                                Toast.makeText(mContext, "asfsf", Toast.LENGTH_SHORT).show();
-                                if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                                    // TODO: Consider calling
-                                    //    ActivityCompat#requestPermissions
-                                    // here to request the missing permissions, and then overriding
-                                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                                    //                                          int[] grantResults)
-                                    // to handle the case where the user grants the permission. See the documentation
-                                    // for ActivityCompat#requestPermissions for more details.
-                                    return;
-                                }
-                                context.startActivity(intent);
-                            }
-                        })
-                        .show();
-                return false;
-            }
-        });
+//        cardView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                new AlertDialog.Builder(v.getContext())
+//                        .setTitle("Hubungi PIC")
+//                        .setMessage("Barang " + model.getName() + ", oleh " + "Amal Usaha Muhammadiyah" + "\n\n Kontak PIC: " + "082240219493")
+//                        .setPositiveButton("Hubungi", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Intent intent = new Intent(Intent.ACTION_CALL);
+//                                intent.setData(Uri.parse("tel:" + "082240219493"));
+////                                Toast.makeText(mContext, "asfsf", Toast.LENGTH_SHORT).show();
+//                                if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+//                                    // TODO: Consider calling
+//                                    //    ActivityCompat#requestPermissions
+//                                    // here to request the missing permissions, and then overriding
+//                                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//                                    //                                          int[] grantResults)
+//                                    // to handle the case where the user grants the permission. See the documentation
+//                                    // for ActivityCompat#requestPermissions for more details.
+//                                    return;
+//                                }
+//                                context.startActivity(intent);
+//                            }
+//                        })
+//                        .show();
+//                return false;
+//            }
+//        });
 
         return v;
     }

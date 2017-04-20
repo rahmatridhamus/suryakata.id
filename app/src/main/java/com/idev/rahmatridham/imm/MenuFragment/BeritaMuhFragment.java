@@ -19,9 +19,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.idev.rahmatridham.himaifofficialapps.R;
 import com.idev.rahmatridham.imm.BeritaDetailActivity;
 import com.idev.rahmatridham.imm.ListAdapter.BeritaMuhammadiyahAdapter;
+import com.idev.rahmatridham.imm.R;
 import com.idev.rahmatridham.imm.model.NewsModel;
 
 import org.json.JSONArray;
@@ -158,11 +158,13 @@ public class BeritaMuhFragment extends Fragment implements AdapterView.OnItemCli
         NewsModel newsModel = newsArrayList.get(position);
         Intent intent = new Intent(BeritaMuhFragment.this.getContext(), BeritaDetailActivity.class);
 
-        intent.putExtra("urlfoto", newsModel.getImg());
+        intent.putExtra("id", newsModel.getId());
         intent.putExtra("title", newsModel.getTitle());
         intent.putExtra("desc", newsModel.getDesc());
         intent.putExtra("source", newsModel.getSource());
-        intent.putExtra("writer", newsModel.getAuthor());
+        intent.putExtra("author", newsModel.getAuthor());
+        intent.putExtra("img", newsModel.getImg());
+        intent.putExtra("date", newsModel.getDate());
 
         startActivity(intent);
     }

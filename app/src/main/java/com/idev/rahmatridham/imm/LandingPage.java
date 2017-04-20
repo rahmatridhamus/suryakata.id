@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
 import com.idev.rahmatridham.imm.MenuFragment.BeritaMuhFragment;
+import com.idev.rahmatridham.imm.MenuFragment.InfoPersyarikatanFragment;
 import com.idev.rahmatridham.imm.MenuFragment.ProdukFragment;
 import com.idev.rahmatridham.imm.MenuFragment.TabFragment;
 import com.idev.rahmatridham.imm.MenuFragment.TimelineViews;
@@ -63,7 +63,7 @@ public class LandingPage extends AppCompatActivity {
         adapter.addFrag(new TimelineViews(), "AGENDA");
         adapter.addFrag(new BeritaMuhFragment(), "PENDIDIKAN");
         adapter.addFrag(new ProdukFragment(), "BISNIS");
-        adapter.addFrag(new InfoPersyarikatanActivity(), "PORTOFOLIO");
+        adapter.addFrag(new InfoPersyarikatanFragment(), "PORTOFOLIO");
         viewPager.setAdapter(adapter);
     }
 

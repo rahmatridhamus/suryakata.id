@@ -11,7 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.R;
+
 
 /**
  * Created by Ratan on 7/27/2015.
@@ -20,7 +21,7 @@ public class TabFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 2 ;
+    public static int int_items = 2;
 
     @Nullable
     @Override
@@ -28,7 +29,7 @@ public class TabFragment extends Fragment {
         /**
          *Inflate tab_layout and setup Views.
          */
-        View x =  inflater.inflate(R.layout.tab_layout,null);
+        View x = inflater.inflate(R.layout.tab_layout, null);
         tabLayout = (TabLayout) x.findViewById(R.id.tabs);
         tabLayout.bringToFront();
         viewPager = (ViewPager) x.findViewById(R.id.viewpager);
@@ -66,11 +67,12 @@ public class TabFragment extends Fragment {
          */
 
         @Override
-        public Fragment getItem(int position)
-        {
-            switch (position){
-                case 0 : return new BeritaUmumFragment();
-                case 1 : return new Video();
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new BeritaUmumFragment();
+                case 1:
+                    return new Video();
 
             }
             return null;
@@ -90,10 +92,10 @@ public class TabFragment extends Fragment {
         @Override
         public CharSequence getPageTitle(int position) {
 
-            switch (position){
-                case 0 :
+            switch (position) {
+                case 0:
                     return "Berita";
-                case 1 :
+                case 1:
                     return "Video";
             }
             return null;

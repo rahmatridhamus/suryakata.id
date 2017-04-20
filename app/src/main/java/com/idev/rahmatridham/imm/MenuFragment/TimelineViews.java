@@ -21,8 +21,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.idev.rahmatridham.imm.ListAdapter.AgendaAcaraAdapter;
-import com.idev.rahmatridham.himaifofficialapps.R;
-import com.idev.rahmatridham.imm.Orientation;
+import com.idev.rahmatridham.imm.ListAdapter.Orientation;
+import com.idev.rahmatridham.imm.R;
 import com.idev.rahmatridham.imm.model.TimelineModel;
 
 import org.json.JSONArray;
@@ -118,13 +118,13 @@ public class TimelineViews extends Fragment implements SwipeRefreshLayout.OnRefr
                             JSONArray today = resSet.getJSONArray("today");
                             for (int i = 0; i < today.length(); i++) {
                                 JSONObject object = today.getJSONObject(i);
-                                timelineModel = new TimelineModel(object.optString("id"),object.optString("title"), object.optString("desc"), object.optString("division"), object.optString("date"), "Today");
+                                timelineModel = new TimelineModel(object.optString("id"),object.optString("date"), object.optString("title"), object.optString("desc"), object.optString("division"), "Today", "082240219493");
                                 timelineModelArrayList.add(timelineModel);
                             }
                             JSONArray jsonArray = upcoming.getJSONArray("data");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                timelineModel = new TimelineModel(object.optString("id"),object.optString("title"), object.optString("desc"), object.optString("division"), object.optString("date") ,object.optString("status"));
+                                timelineModel = new TimelineModel(object.optString("id"),object.optString("date"), object.optString("title"), object.optString("desc"), object.optString("division") ,object.optString("status"), "082240219493");
                                 timelineModelArrayList.add(timelineModel);
                             }
 //                            Collections.reverse(timelineModelArrayList);

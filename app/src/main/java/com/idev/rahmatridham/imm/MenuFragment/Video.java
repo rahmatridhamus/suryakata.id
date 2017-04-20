@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.R;
 
 
 /**

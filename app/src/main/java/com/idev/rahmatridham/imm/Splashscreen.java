@@ -1,11 +1,14 @@
 package com.idev.rahmatridham.imm;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.IntroActivity.IntroActivity;
+
 
 public class Splashscreen extends AppCompatActivity {
 
@@ -25,11 +28,17 @@ public class Splashscreen extends AppCompatActivity {
             public void run() {
                 // This method will be executed once the timer is over
                 // Start your app main activity
-                Intent i = new Intent(Splashscreen.this, LandingPage.class);
-                startActivity(i);
+                SharedPreferences pref = getSharedPreferences("ActivityPREF", Splashscreen.this.getBaseContext().MODE_PRIVATE);
 
-                // close this activity
-                finish();
+                if (pref.getBoolean("activity_executed", true)) {
+                    Intent intent = new Intent(Splashscreen.this, IntroActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(Splashscreen.this, LandingPage.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, 2000);
     }

@@ -5,7 +5,7 @@ package com.idev.rahmatridham.imm.model;
  */
 public class NewsModel {
 
-    String id, img,title,desc, source, author, date;
+    String id, img, title, desc, source, author, date, tag;
 
     public NewsModel(String id, String title, String desc, String source, String author, String img, String date) {
         this.id = id;

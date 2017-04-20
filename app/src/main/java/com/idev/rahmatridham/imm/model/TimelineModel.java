@@ -4,15 +4,24 @@ package com.idev.rahmatridham.imm.model;
  * Created by rahmatridham on 8/17/2016.
  */
 public class TimelineModel {
-    String id, date, title, desc, division, status;
+    String id, date, title, desc, division, status, contact;
 
-    public TimelineModel(String id, String title, String desc, String division, String date, String status) {
+    public TimelineModel(String id, String date, String title, String desc, String division, String status, String contact) {
         this.id = id;
+        this.date = date;
         this.title = title;
         this.desc = desc;
         this.division = division;
-        this.date = date;
         this.status = status;
+        this.contact = contact;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getStatus() {

@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.idev.rahmatridham.himaifofficialapps.R;
+import com.idev.rahmatridham.imm.R;
 import com.vipul.hp_hp.timelineview.TimelineView;
 
 /**

@@ -3,15 +3,24 @@ package com.idev.rahmatridham.imm.model;
 /**
  * Created by rahmatridham on 8/17/2016.
  */
-public class JualanModel {
-    String id, img, name,desc,price;
+public class ProdukModel {
+    String id, img, name, desc, price, contact;
 
-    public JualanModel(String id, String img, String name, String desc, String price) {
+    public ProdukModel(String id, String img, String name, String desc, String price, String contact) {
         this.id = id;
         this.img = img;
         this.name = name;
         this.desc = desc;
         this.price = price;
+        this.contact = contact;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getId() {
