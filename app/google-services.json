@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "771902152759",
+    "firebase_url": "https://suryakataid-c4150.firebaseio.com",
+    "project_id": "suryakataid-c4150",
+    "storage_bucket": "suryakataid-c4150.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771902152759:android:3481b23d318204cd",
+        "android_client_info": {
+          "package_name": "com.idev.rahmatridham.imm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771902152759-big987sp9pksb1bt03rbaf36t9o05nmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMPbWByRq8va85EsO9TU7-MYL521jhUGk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

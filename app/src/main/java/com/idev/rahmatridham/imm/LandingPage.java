@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.idev.rahmatridham.imm.MenuFragment.BeritaMuhFragment;
 import com.idev.rahmatridham.imm.MenuFragment.InfoPersyarikatanFragment;
 import com.idev.rahmatridham.imm.MenuFragment.ProdukFragment;
@@ -45,6 +46,8 @@ public class LandingPage extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+        FirebaseMessaging.getInstance().subscribeToTopic("news");
+
         setupTabIcons();
 
     }
@@ -75,7 +78,6 @@ public class LandingPage extends AppCompatActivity {
             super(manager);
 
         }
-
 
 
         @Override

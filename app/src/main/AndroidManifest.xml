@@ -13,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <provider android:authorities="com.facebook.app.FacebookContentProvider723064901194063"
+        <provider
             android:name="com.facebook.FacebookContentProvider"
-            android:exported="true"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+            android:authorities="com.facebook.app.FacebookContentProvider723064901194063"
+            android:exported="true" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
         <activity
             android:name="com.idev.rahmatridham.imm.Splashscreen"
             android:screenOrientation="portrait"
@@ -27,7 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".FirebaseConsole.SettingActivity"></activity>
         <activity
             android:name="com.idev.rahmatridham.imm.LandingPage"
             android:screenOrientation="portrait"
@@ -46,13 +50,27 @@
         <activity
             android:name="com.idev.rahmatridham.imm.DescriptionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <activity
             android:name="com.idev.rahmatridham.imm.IntroActivity.IntroActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".FirebaseConsole.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FirebaseConsole.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
